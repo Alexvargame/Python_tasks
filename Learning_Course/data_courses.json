@@ -1,0 +1,45 @@
+{
+    "courses": [
+        {
+            "name": "Вводный",
+            "description": "moblie",
+            "theory_practic": "theory",
+            "professor": [
+                "Иванов"
+            ],
+            "interns": [
+                "Смирнов"
+            ],
+            "hours": 30,
+            "tasks": {
+                "Контрольная №1": 5,
+                "Контрольная №2": 4
+            }
+        },
+        {
+            "name": "Вводный_практика",
+            "description": "mobile",
+            "theory_practic": "practic",
+            "professor": [
+                "Петров"
+            ],
+            "interns": [],
+            "hours": 24,
+            "tasks": {}
+        },
+        {
+            "name": "Часть1",
+            "description": "moblie",
+            "theory_practic": "theory",
+            "professor": [
+                "Иванов",
+                "Петров"
+            ],
+            "interns": [
+                "Сидоров"
+            ],
+            "hours": 12,
+            "tasks": {}
+        }
+    ]
+}

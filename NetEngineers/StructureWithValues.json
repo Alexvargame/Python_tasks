@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "first",
+    "value": "F",
+    "values": []
+  },
+  {
+    "id": 2,
+    "title": "second",
+    "value": "",
+    "values": [
+      "S",
+      "SE"
+    ]
+  }
+]
