@@ -1,0 +1,30 @@
+import numpy as np
+l=[1,2,3,4,5]
+a=np.array(l)
+print(a)
+from array import *
+array_num = array('i', [1,3,5,7,9])
+for i in array_num:
+    print(i)
+print("Access first three items individually")
+print(array_num[0])
+print(array_num[1])
+print(array_num[2])
+array_num = array('i', [1, 3, 5, 3, 7, 1, 9, 3])
+print("Original array: "+str(array_num))
+array_num.reverse()
+print("Reverse the order of the items:")
+print(str(array_num))
+print("--")
+for i in array_num:
+    print(array_num.count(i))
+print("-")
+array_num.insert(1, 2)
+print(array_num)
+array_num = array('i', [1, 3, 5, 3, 7, 1, 9, 3])
+print("Original array: "+str(array_num))
+array_num.reverse()
+print("Reverse the order of the items:")
+print(str(array_num))
+l = list(array_num)
+print(l)
