@@ -32,19 +32,19 @@ class Letter():
 def astar(initial, goal_test, successors, grid,word):
     frontier = Queue()
     frontier.push(Letter(initial.state,None,initial.char,initial.char))
-    explored = {initial:initial.char}
+    explored = {initial: initial.char}
     while not frontier.empty:
         current_node = frontier.pop()
         current_state = current_node.state
         if goal_test(current_state):
-            if current_node.cost==word:
+            if current_node.cost == word:
                 return current_node
         for child in successors(current_state,word):
             new_cost=current_node.cost+grid[child.x][child.y].char
             if child not in explored and new_cost in word:
                 if new_cost not in explored.values():
-                    explored[child]=new_cost
-                frontier.push(Letter(child,current_node,grid[child.x][child.y].char,new_cost))
+                    explored[child] = new_cost
+                frontier.push(Letter(child,current_node, grid[child.x][child.y].char, new_cost))
 
 
     return None
@@ -102,7 +102,7 @@ class Maze:
     def print_path(self,path):
         output = ''
         for p in path:
-            output+=self._grid[p.x][p.y].char
+            output += self._grid[p.x][p.y].char
         return output
 
 def find_word(testBoard,word):
@@ -111,7 +111,7 @@ def find_word(testBoard,word):
     for start in start_letters:
         for end in end_letters:
             M=Maze(grid, start, end)
-            solution = astar(M.start, M.goal_test, M.successors,M._grid,word)
+            solution = astar(M.start, M.goal_test, M.successors, M._grid, word)
             if solution:
                 path = node_to_path(solution)
                 print(path)
